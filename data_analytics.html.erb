@@ -1,0 +1,744 @@
+<%= content_for :javascript do %>
+<script>
+  // Smooth Scrolling
+  $(document).ready(function() {
+    $("#teacher-scroll").click(function (){
+        $('html, body').animate({
+            scrollTop: $("#teacher-section").offset().top
+        }, 1000);
+    });
+    $("#curriculum-scroll").click(function (){
+      $('html, body').animate({
+          scrollTop: $("#curriculum-section").offset().top
+      }, 1000);
+    });
+  });
+</script>
+<% end %>
+
+<% alumni = [
+  {
+    first_name: "Matthew",
+    last_name: "Biggins, iX Alum",
+    job: "Studied Economics at Notre Dame",
+    ix_year: "2014",
+    university: "Notre Dame",
+    university_year: "2017",
+    quote: "iX was the first thing employers asked about during interviews. No experience compares to the ability to learn a completely new skill and deliver multiple complex projects. On the job, iX has been incredibly useful. Most of the analytics work I do today is based off of what I learned while at iX.",
+    img: "matthew-biggins",
+    linkedin: "https://www.linkedin.com/in/bigginsmatthew/",
+    blog: "https://blog.ixperience.co/breathing-life-into-code"
+  },
+  {
+    first_name: "Gabriela",
+    last_name: "Silguero",
+    job: "Studied Psychology and Health at Rutgers",
+    ix_year: "2018",
+    university: "New York University",
+    university_year: "2020",
+    quote: "iX Career Semester is like nothing I have ever experienced before. You not only learn lifelong skills, but you connect and interact with students and teachers that will give you insight to more than just what you are learning in the classroom. If you want to try something different and out of your comfort zone, iX is a great way to do so.",
+    img: "gabriela-silguero",
+    linkedin: "https://www.linkedin.com/in/gabriela-silguero/",
+    blog: "https://blog.ixperience.co/how-ixperience-helped-me-to-rediscover-my-passions"
+  },{
+    first_name: "Cameron",
+    last_name: "Cross",
+    degree: "Business degree from UVA",
+    job: "Consultant at Bain & Co, HBS MBA candidate",
+    ix_year: "2014",
+    university: "Univ. of Virginia",
+    university_year: "2016",
+    quote: "Reflecting on my recent interview experiences, I can point to 3 major reasons that iX is beneficial to aspiring young professionals of almost any career: You have the chance to learn and live a remarkably productive and healthy lifestyle; you will craft uniquely interesting and memorable stories for interviews; you will learn from brilliant and talented students, lecturers, and staff.",
+    img: "cameron-cross",
+    linkedin: "https://www.linkedin.com/in/cameron-cross-79284169/",
+    blog: "https://blog.ixperience.co/interning-with-bain-after-ixperience-a-reflection-on-my-time-in-cape-town"
+  },
+  ] %>
+
+  <% teacher = {
+    name: "Connor Lawless",
+    linkedin: "https://www.linkedin.com/in/connorlawless/",
+    img: "people/connor-lawless",
+    job: "Former AI Scientist at RBC Capital Markets, PhD candidate at Cornell",
+    quote: "The technical barriers to doing data analysis are becoming smaller and smaller every year. You no longer need access to a supercomputer and a graduate degree in computer science – you can learn how to build cutting edge data models in a 20-minute medium tutorial. What’s really going to distinguish working people over the next 10 years is the ability to communicate effectively and affect change through their analysis."
+  }%>
+  
+  <% intern = [
+  {
+    first_name: "Alexandra",
+    last_name: "Ginsburg",
+    linkedin: "https://www.linkedin.com/in/alexandra-ginsburg/",
+    img: "alexandra-ginsburg",
+    university: "Studied Policy at Cornell",
+    job: "Interned at Invictus Capital",
+    logo: "logos/invictus-clear",
+    quote: "It felt like I did meaningful work and contributed as a valuable asset at Invictus. It was fun getting to know new people and see my personal strengths come into play. In our internship group we were able to see the group explore individual strengths and make everyone work towards creating the best final presentation."
+  },
+  {
+    first_name: "Camryn",
+    last_name: "Okere",
+    linkedin: "https://www.linkedin.com/in/camrynokere/",
+    img: "camryn-okere",
+    university: "Studied Business at WashU",
+    job: "Interned at SoundCloud",
+    logo: "logos/soundcloud-clear",
+    quote: "The working environment was young, driven, and collaborative. Once a week, the teams came together to share their work and see how the product and our projects progressed on a large scale. Everyone was also really concerned about us having a good experience."
+  },
+  {
+    first_name: "Manmit",
+    last_name: "Singh",
+    linkedin: "https://www.linkedin.com/in/manmit-singh99/",
+    img: "manmit-singh",
+    university: "Studied Comp Sci at Duke",
+    job: "Interned at Locstat",
+    logo: "logos/locstat-logo",
+    quote: "I wish every class I'm taking in college followed the hands-on approach my teachers took with my iX course. The integration of projects and classes really helped me get a handle of the concepts and hit the ground running at Locstat. The internship with Locstat was really the most enriching learning process in the journey."
+  },
+  ] %>     
+
+<!--Banner-->
+<section class="py-9 py-lg-10 bg-dark text-white bg-semester-grid-white">
+  <div class="container">
+    <div class="row justify-content-center align-items-center mb-6">
+      <div class="col-lg-5">
+        <%= image_tag "ixperience/semester/remote-home-sm", class: "w-100 rounded d-lg-none mb-6" %>
+        <%= image_tag "ixperience/semester/remote-home-md", class: "w-100 rounded d-none d-lg-block" %>
+      </div>
+      <div class="col-lg-7 col-xl-6">
+        <div class="pl-lg-7 pl-xl-8">
+          <h3 class="d-none d-md-block strong mb-8 success-underline">
+            The essential addition to your degree: Data Analytics.
+          </h3>
+          <h4 class="d-md-none strong mb-8 success-underline">
+            The essential addition to your degree: Data Analytics.
+          </h4>
+          <h5 class="mb-7">
+            Unlock your future with a remote course + internship in Data Analytics, part-time.
+          </h5>
+          <div class="mb-6 text-black">
+            <div class="program-pillar badge font-weight-normal badge-light p-2">Jan 24 – Apr 15</div>
+            <div class="program-pillar badge font-weight-normal badge-light p-2 ml-md-1">Includes remote internship</div>
+            <div class="program-pillar badge font-weight-normal badge-light p-2 ml-md-1 mt-2 mt-md-0">Flexible schedule</div>
+            <div class="program-pillar badge font-weight-normal badge-light p-2 ml-md-1 mt-2 mt-md-0">3 credits</div>
+          </div>
+
+          <%= render "buttons/apply", text: "Apply now", btn_class: "btn-lg d-block d-md-inline-block" %>
+          <%= render "buttons/semester_info", text: "Send me more info", btn_class: "cursor btn btn-light btn-transparent btn-lg d-block d-md-inline-block ml-md-2 ml-0 mt-5 mt-md-0" %>        
+
+          <div class="accredit-block border mt-6">
+            <div class="d-inline-flex flex-row align-items-center">
+              <div class="py-1 px-2">
+                <%= image_tag "logos/university-south-florida-sml", class: "uni-logo p-2" %>
+              </div>
+              <div>
+                <p class="mb-0 top-text">
+                  <strong>Accredited by</strong><br>University of South Florida*
+                </p>
+              </div>
+            </div>
+            <div class="d-inline-flex flex-row align-items-center border-top">
+              <div class="col-6 pt-2 pb-3">
+                <p class="mb-0 sub-text">
+                  Co-created and delivered in partnership with
+                </p>
+              </div>
+              <div class="pr-2">
+                <%= image_tag "logos/world-strides-white", class: "accred-logo pr-3" %>
+                <%= image_tag "logos/isa-white", class: "accred-logo" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "modals/semester_info" %>
+
+<!--Intro quote-->
+<section class="bg-white text-center">
+  <div class="container-fluid pl-0 pr-0 ">
+    <div class="d-flex justify-content-between align-items-center no-gutters">
+      <%= image_tag "ixperience/semester/top-dots-left", class: "d-none d-lg-block" %>
+      <div class="text-center px-8 py-10 px-md-10 py-lg-0 px-lg-9">
+        <h5 class="strong">
+          “The ability to take data – to be able to understand it, to process it, to extract value from it, to visualize it, to communicate it – is going to be a hugely important skill in the next decades.”
+        </h5>
+        <p class="strong">Hal Varian, Chief Economist,<%= image_tag "logos/google-logo", class: "ml-2 quote-logo-google" %></p>
+      </div>
+      <%= image_tag "ixperience/semester/top-dots-right", class: "d-none d-lg-block" %>
+    </div>
+  </div>
+</section>
+
+<!--Introducing iX Semester-->
+<section class="py-10 bg-light">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-12">
+        <div class="row no-gutters mb-8 text-center">
+          <div class="col-12 col-md-8 offset-md-2">
+            <h3 class="strong">Introducing the iX Career Semester Program.</h3>
+            <h6 class="px-lg-12">Gain in-demand data analytics skills, internship experience, and college credit. All on a flexible schedule.</h6>
+          </div>
+        </div>
+        <div class="row row-eq-height px-lg-10">
+          <div class="col-md-4 mb-8 mb-md-0">
+            <div class="h-100 bg-white rounded">
+              <%= image_tag "ixperience/semester/pillar-learn", class: "w-100 rounded-top" %>
+              <div class="p-5">
+                <h4 class="strong success-underline">Learn.</h4>
+                <div class="mb-5">
+                  The program begins with a live-taught remote class, hosted by expert Data Scientist <span id="teacher-scroll" class="cursor text-success">Connor Lawless</span> for 3 weeks.
+                </div>
+                <ul>
+                  <li class="mb-3">
+                    <i class="fa fa-check text-success pr-2"></i>
+                    Small, engaging classes capped at 30
+                  </li>
+                  <li class="mb-3">
+                    <i class="fa fa-check text-success pr-2"></i>
+                    Flexible weekly schedule (7-11 hours)
+                  </li>
+                  <li class="mb-3">
+                    <i class="fa fa-check text-success pr-2"></i>
+                    Learn to solve real-world problems
+                  </li>
+                </ul>              
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-8 mb-md-0">
+            <div class="h-100 bg-white rounded">
+              <%= image_tag "ixperience/semester/pillar-intern", class: "w-100 rounded-top" %>
+              <div class="p-5">
+                <h4 class="strong success-underline">Intern.</h4>
+                <div class="mb-5">
+                 After your course, you'll start a 9-week remote internship with a client. There’s no better way to learn than to apply your skills.
+               </div>
+               <ul>
+                  <li class="mb-3">
+                    <i class="fa fa-check text-success pr-2"></i>
+                    Real work experience for your resume
+                  </li>
+                  <li class="mb-3">
+                    <i class="fa fa-check text-success pr-2"></i>
+                    Flexible weekly schedule (7-11 hours)
+                  </li>
+                  <li class="mb-3">
+                    <i class="fa fa-check text-success pr-2"></i>
+                    Support from your teachers throughout
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="h-100 bg-white rounded">
+              <%= image_tag "ixperience/semester/pillar-excel", class: "w-100 rounded-top" %>
+              <div class="p-5">
+                <h4 class="strong success-underline">Excel.</h4>
+                <div class="mb-5">
+                  At the end, you'll be able to analyze and communicate effctively with data. You're one step ahead, and ready for your next move.
+                </div>
+                <ul>
+                  <li class="mb-3">
+                    <i class="fa fa-check text-success pr-2"></i>
+                    Certificate in Data Analytics
+                  </li>
+                  <li class="mb-3">
+                    <i class="fa fa-check text-success pr-2"></i>
+                    College credit from USF (optional add-on)
+                  </li>
+                  <li class="mb-3">
+                    <i class="fa fa-check text-success pr-2"></i>
+                    Resume & interview prep with iX
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Teacher Testimonial-->
+<div id="teacher-section"></div>
+<section class="bg-success py-10">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 mx-0 px-lg-0 pr-lg-8">
+        <div class="text-white">
+          <h4 class="strong success-underline white pr-lg-8">Meet your teacher, mentor, and advisor: Connor Lawless</h4>
+          <h6 class="d-none d-md-block">
+            All of our teachers are experts in their fields, and are supported by one or two TAs per class. You’ll gain invaluable perspective, and mentors who will advise you throughout the program.
+          </h6>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="tab-content bg-light rounded p-7">
+          <div class="row no-gutters justify-content-start">
+            <div class="col-4 col-md-2 col-lg-3 col-xl-2">
+              <%= image_tag teacher [:img], class: "profile-lg rounded-circle img-fluid"%>
+            </div>
+            <div class="col text-left pl-6 pl-md-4 pl-lg-0">
+              <h5 class="testimonial-name text-success strong pt-4 new-testimonial mb-1"><%= teacher[:name] %></h5>
+              <p class="strong"><%= teacher[:job] %></p>
+            </div>
+          </div>
+          <div>
+            <p class="mt-5 mb-7"><%= teacher[:quote] %></p>   
+            <a href="<%= teacher[:linkedin] %>" target="_blank" class="linkedin-blue b"><%= image_tag "icons/linkedin-round", class: "icon mr-2 mb-1 linkedin-icon" %>View on LinkedIn</a>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Skills-->
+<section class="bg-white py-10 pt-lg-8 pb-lg-8">
+  <div class="container-fluid">
+    <%= image_tag "ixperience/semester/dots-triangle-back", class: "d-none d-md-block position-absolute fixed-to-bottom" %>
+    <div class="container">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-lg-6 d-none d-md-block  text-center">
+          <%= image_tag "ixperience/semester/data-analysis-triangle-md", class: "img-fluid" %>
+        </div>
+        <%= image_tag "ixperience/semester/data-analysis-triangle-sm", class: "mb-5 d-block d-md-none w-100" %>
+        <div class="col-lg-6 col-lg-6">
+          <div class="pl-lg-9 pl-xl-0">
+            <h4 class="strong success-underline">
+              The skill that can boost any student's career.
+            </h4>
+            <p class="strong">
+            Each year across all industries, jobs requiring data analytics skills grow rapidly.</p>
+            <p>
+            To remain relevant when applying for jobs, it's critical to demonstrate that you can work with and communicate around data.</p>
+            <p>
+              Right now as a student, you can develop this highly sought-after skillset that could have a huge impact on your career opportunities, no matter your intended career path.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Alumni Testimonials-->
+<section class="bg-dark py-10">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <h3 class="text-left text-white strong px-5 px-lg-0">
+          Hear it from alumni, whose lives changed.
+        </h3>
+        <ul class="nav nav-pills nav-testimonials flex-row flex-nowrap justify-content-start no-underline text-left mt-7 mb-6 mb-md-0" style="overflow-x: scroll">
+          <% alumni.each_with_index do |alum, index| %>
+            <% active = index.zero? ? "active" : "" %>
+            <% style = alumni.size > 3 ? "flex-basis: 0; flex-grow: 1" : "" %>
+            <li class="nav-item pr-2" style="<%= style %>">
+              <a href="#<%= alum[:img] %>" data-toggle="pill" class="px-2 py-0 small nav-link <%= active %>">
+                <div class="d-flex justify-content-center">
+                  <div class="align-items-center text-center">
+                    <%= image_tag "people/#{alum[:img]}", class: "rounded-circle mb-md-0 " %>
+                    <br>
+                    <div class="pt-2">
+                      <p class="big b"><%= alum[:first_name] %></p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <div class="tab-content mb-7">
+          <% alumni.each_with_index do |alum, index| %>
+          <% active = index.zero? ? "show active" : "" %>
+          <div class="tab-pane fade <%= active %>" id="<%= alum[:img] %>">
+              <div class="bg-light rounded p-7">
+                <div class="row no-gutters justify-content-start">
+                  <div class="col-4 col-md-2 col-lg-3 col-xl-2 align-self-center">
+                    <%= image_tag "people/#{alum[:img]}", class: "profile-lg rounded-circle img-fluid" %>
+                  </div>
+                  <div class="col text-left pl-6 pl-lg-0 align-self-center pt-4">
+                      <h5 class="testimonial-name text-success strong"><%= alum[:first_name] %> <%= alum[:last_name] %></h5>
+                      <p class="strong mt-n2"><%= alum[:job] %></p>
+                  </div>
+                </div>
+                <div>
+                  <p class="mt-5 mb-7"><%= alum[:quote] %></p>   
+                  <a href="<%= alum[:linkedin] %>" target="_blank" class="linkedin-blue b"><%= image_tag "icons/linkedin-round", class: "icon mr-2 mb-1 linkedin-icon" %>View on LinkedIn</a>            
+                </div>
+              </div>
+            </div>
+          <% end %>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!--How it works -->
+<section class="bg-white py-10 bg-semester-grid-pink">
+  <div class="container">
+    <div class="row text-left">
+      <div class="mb-7 pl-4">
+        <h3 class="strong">How it works</h3>
+      </div>
+    </div>
+    <div class="row row-eq-height">
+      <div class="col-md-4">
+        <div class="h-100">
+          <h5 class="col-md-9 success-underline success-underline--close mb-7 p-0">
+            <strong>First 3 weeks:</strong> Data analytics course
+          </h5>
+          <div class="pr-lg-6">
+            <div class="d-flex align-items-center mb-4">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>Forget zoom university. iX classes are highly engaging and energizing.</div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>Learn from experts in small online classes.</div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>Mon, Tues, Thurs – 6pm-8pm ET (flexible attendance requirement).</div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>Catch-up classes, recordings, and 1:1 support in case you miss.</div>
+            </div>
+            <div class="d-flex align-items-center mb-10">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>Outcome: a strong data analytics skillset. Time to create value in your internship.</div>
+            </div>
+          </div>
+          <div class="position-absolute fixed-to-bottom">
+            <div id="curriculum-scroll" class="btn btn-success btn-lg cursor">Detailed Curriculum</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="h-100">
+          <h5 class="col-md-8 success-underline success-underline--close mb-7 mt-8 mt-md-0 p-0">
+            <strong>Next 9 weeks:</strong> Remote internship
+          </h5>
+          <div class="pr-lg-6">
+            <div class="d-flex align-items-center mb-4">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>Guaranteed placement at an impressive company.</div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>9-12 hours / week average commitment, with a flexible work schedule.</div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>Additional classes & teacher support so you keep learning.</div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>Outcome: Data skills, a strong resume, project examples, and remote experience!</div>
+            </div>
+            <div class="d-flex align-items-center mb-10">
+              <i class="fa fa-check text-success pr-4"></i>
+              <div>You're as competitive as ever for your next recruiting cycle.</div>
+            </div>
+          </div>
+          <div class="position-absolute fixed-to-bottom">
+            <a href="/semester/remote/internship" class="btn btn-success btn-lg">Internship Breakdown</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="h-100">
+          <h5 class="col-md-8 success-underline success-underline--close mb-7 mt-8 mt-md-0 p-0">
+            <strong>Add on 3 college credits</strong>
+          </h5>
+          <div class="mb-10">
+            <p>
+              You can elect to add on a for-credit course to your program and earn 3 credits from the University of South Florida.* Whether you're able to transfer credits or not (depends on your school), you can represent this program as a tertiary academic experience on your resume and LinkedIn, as well as when applying to grad school.
+            </p>
+            <div class="accredit-block border mt-6">
+              <div class="d-inline-flex flex-row align-items-center">
+                <div class="py-1 px-2">
+                  <%= image_tag "logos/university-south-florida-sml", class: "uni-logo p-2" %>
+                </div>
+                <div>
+                  <p class="mb-0 top-text">
+                    <strong>Accredited by</strong><br>University of South Florida *
+                  </p>
+                </div>
+              </div>
+              <div class="d-inline-flex flex-row align-items-center border-top">
+                <div class="col-6 pt-2 pb-3">
+                  <p class="mb-0 sub-text">
+                    Co-created and delivered in partnership with
+                  </p>
+                </div>
+                <div class="pr-2">
+                  <%= image_tag "logos/world-strides-dark", class: "accred-logo pr-3" %>
+                  <%= image_tag "logos/isa-dark", class: "accred-logo" %>
+                </div>
+              </div>
+            </div>
+            <p class="small mt-5 em">* If you want to add the for-credit module, you must do so one month before the start date of the program.</p>
+          </div>
+          <div class="position-absolute fixed-to-bottom">
+            <div class="btn btn-success btn-lg cursor" data-target="#career-semester-credit-modal" data-toggle="modal">Credit Info</div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Credits modal-->
+<%= render "partials/credits" %>
+
+<!--Curriculum-->
+<div id="curriculum-section"></div>
+<section class="bg-light text-center py-10">
+  <div class="container">
+    <div class="row mb-8">
+      <div class="header-cols">
+        <h3 class="font-weight-bold">A powerful curriculum.</h3>
+        <h5>
+          iX programs teach you key skills so that you can create value in your internship after only a few weeks of learning.
+        </h5>
+      </div>
+    </div>
+    <div class="curriculum-cards row row-eq-height justify-content-center mb-md-7">
+      <div class="col-10 col-sm-6 col-lg-4 mb-7">
+        <div class="px-5 py-7 card-box-shadow rounded h-100 border-top-success bg-white">
+          <img class="mb-5 sml-icon" src="/assets/skills/python-54bc15023619a7ac47f5011cc9847e4f39c3881e4213cf69d500c73af63e88b8.svg">
+          <h6 class="font-weight-bold success-underline success-underline--close centered mb-7">
+            Foundations of Statistics
+          </h6>
+          <div class="d-none d-md-block">You can only analyze data with a good grounding in stats. Learn likelihood, probability, hypothesis testing, and more.</div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-lg-4 mb-7">
+        <div class="px-5 py-7 card-box-shadow rounded h-100 border-top-success bg-white">
+          <img class="mb-5 sml-icon" src="/assets/skills/stats-178a58fd482a9d99e177010cb58902b71ed539f2424bd2f56b527c7d866aa48c.svg">
+          <h6 class="font-weight-bold success-underline success-underline--close centered mb-7">
+            Data-Driven Decisions
+          </h6>
+          <div class="d-none d-md-block">Core concepts of data analysis, and how it can be used to drive decision-making.</div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-lg-4 mb-7">
+        <div class="px-5 py-7 card-box-shadow rounded h-100 border-top-success bg-white">
+          <img class="mb-5 sml-icon" src="/assets/skills/data-apps-a36f458f429d2f0fc527b06b776a00386067b0e3c1667994f957d17cde5cec01.png">
+          <h6 class="font-weight-bold success-underline success-underline--close centered mb-7">
+            Interpretation and Presentation
+          </h6>
+          <div class="d-none d-md-block">Draw conclusions from your analyses, and present them using informative visuals to guide decisions.</div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-lg-4 mb-7">
+        <div class="px-5 py-7 card-box-shadow rounded h-100 border-top-success bg-white">
+          <img class="mb-5 sml-icon" src="/assets/skills/rapid-prototyping-10dee29ae1a4e19b84730b6736d85723a3d36010436bb3ce24dbf0faea681d04.png">
+          <h6 class="font-weight-bold success-underline success-underline--close centered mb-7">
+            Python for Analysis
+          </h6>
+          <div class="d-none d-md-block">Understand and work with the gold standard technology of data analysis. Don't be intimidated, we'll teach you fundamentals from the ground up.</div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-lg-4 mb-7">
+        <div class="px-5 py-7 card-box-shadow rounded h-100 border-top-success bg-white">
+          <img class="mb-5 sml-icon" src="/assets/skills/rapid-prototyping-10dee29ae1a4e19b84730b6736d85723a3d36010436bb3ce24dbf0faea681d04.png">
+          <h6 class="font-weight-bold success-underline success-underline--close centered mb-7">
+            Intro to AI and Big Data
+          </h6>
+          <div class="d-none d-md-block">Tools and techniques for analyzing massive data sets. Learn how to train data models to make predictions.</div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-lg-4 mb-7">
+        <div class="px-5 py-7 card-box-shadow rounded h-100 border-top-success bg-white">
+          <img class="mb-5 sml-icon" src="/assets/skills/git-c79371a0d09481a648c8be962c1c3fe40785c32bf8599cc9ae4bd09cf81b004f.svg">
+          <h6 class="font-weight-bold success-underline success-underline--close centered mb-7">
+            Git, Databases & SQL
+          </h6>
+          <div class="d-none d-md-block">Technology that allows you to collaborate with others, store data, and manage the organization of information.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Intern Testimonials-->
+<section class="py-10 bg-white bg-semester-grid-pink">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <h3 class="text-left strong">
+          The internship sets you apart.
+        </h3>
+        <h6>
+          After your course, you'll be placed in a remote internship with teammates from your class. But remote doesn't mean disengaged: expect collaboration with your fellow students, check-ins with your manager on a flexible schedule, and exciting real-world work.
+        </h6>
+        <ul class="nav nav-pills nav-testimonials flex-row flex-nowrap justify-content-start no-underline text-left mt-7 mt-md-0 mb-6 mb-md-0" style="overflow-x: scroll">
+          <% intern.each_with_index do |inte, index| %>
+          <% active = index.zero? ? "active" : "" %>
+          <% style = intern.size > 3 ? "flex-basis: 0; flex-grow: 1" : "" %>
+          <li class="nav-item pr-2" style="<%= style %>">
+            <a href="#<%= inte[:img] %>" data-toggle="pill" class="px-2 py-0 small nav-link <%= active %>">
+              <div class="d-flex justify-content-center">
+                <div class="align-items-center text-center">
+                  <%= image_tag "people/#{inte[:img]}", class: "rounded-circle mb-md-0" %>
+                  <br>
+                  <div class="pt-2">
+                    <p class="big b"><%= inte[:first_name] %></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <div class="tab-content mb-7">
+          <% intern.each_with_index do |inte, index| %>
+          <% active = index.zero? ? "show active" : "" %>
+          <div class="tab-pane fade <%= active %>" id="<%= inte[:img] %>">
+            <div class="bg-light rounded p-7">
+              <div class="row no-gutters justify-content-start">
+                <div class="col-4 col-md-2 col-lg-3 col-xl-2 align-self-center">
+                  <%= image_tag "people/#{inte[:img]}", class: "profile-lg rounded-circle img-fluid" %>
+                </div>
+                <div class="col text-left pl-7 pl-lg-2 mt-md-2 align-self-center">
+                    <h5 class="testimonial-name text-success strong mb-2"><%= inte[:first_name] %> <%= inte[:last_name] %></h5>
+                    <p class="strong mt-n2"><%= inte[:university] %></p>
+                    <p class="strong mt-n4"><%= inte[:job] %> </p>
+                    <%= image_tag "#{inte[:logo]}", class: "img-fluid internship-logo mt-n4" %>
+                </div>
+              </div>
+              <div>
+                <p class="mt-5 mb-7"><%= inte[:quote] %></p>   
+                <a href="<%= inte[:linkedin] %>" target="_blank" class="b linkedin-blue"><%= image_tag "icons/linkedin-round", class: "icon mr-2 mb-1 linkedin-icon" %>View on LinkedIn</a>            
+              </div>
+            </div>
+          </div>
+          <% end %>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!--Degree supercharged-->
+<section class="bg-light py-10">
+  <div class="container-fluid pr-lg-0 pl-lg-0">
+    <div class="d-flex justify-content-between no-gutters">
+      <div class="col-3 d-none d-lg-block pl-0 text-left">
+        <%= image_tag "ixperience/semester/mid-dots-left", class: "img-fluid p-0 m-0" %>
+      </div>
+      <div class="col mb-7 align-items-center text-center">
+        <h3 class="strong">
+          Your degree, supercharged.
+        </h3>
+        <h6>
+          The data analytics skillset is highly useful across all majors and career paths.
+        </h6>
+        <%= image_tag "ixperience/semester/different-majors-ds-sm", class: "col d-block d-md-none mt-8 mx-auto" %>
+        <div class="d-none d-md-block mt-8 mx-auto">
+          <%= image_tag "ixperience/semester/different-majors-ds-md", class: "img-fluid" %>
+        </div>
+      </div>
+      <div class="col-3 d-none d-lg-block pr-0 align-items-right text-right">
+        <%= image_tag "ixperience/semester/mid-dots-right", class: "img-fluid p-0 m-0" %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Designed for you -->
+<section class="bg-dark py-10 text-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="header-cols mb-7">
+        <h3 class="strong">Designed to work for <em>you</em></h3>
+      </div>
+    </div>
+    <%= render "partials/designed_for_you" %>
+  </div>
+</section>
+
+<!--Dates and deadlines -->
+<section class="py-10">
+  <div class="container">
+    <%=  render "partials/dates_and_deadlines_full_section" %>
+  </div>
+</section>
+
+<!--Ready to improve -->
+<section class="py-11 bg-success" id="part-time-apply">
+  <div class="container">
+    <%=  render "partials/bottom_apply" %>
+  </div>
+</section>
+
+<!--Internationally-recognized -->
+<section class="pt-10 pb-9 bg-white">
+  <div class="container">
+    <div class="row text-left mb-5 justify-content-center">
+      <div class="col-12 col-md-10 mb-5">
+        <h3 class="strong success-underline">iX Career Semester is the creation of two internationally-recognized education companies</h3>
+      </div>
+    </div>
+    <div class="row text-left mb-5 justify-content-center">
+      <div class="col-12 col-md-10">
+        <p class="big">
+          In 2020, iXperience and WorldStrides joined forces to create a one-of-a-kind career-boosting program for highly-motivated students around the world.
+        </p>
+        <p class="big">
+          Part coursework, one part internship, and a whole lot of fun, iX Career Semester enhances employability by demonstrating the application of desired 21st century skill sets like data analytics and remote working ability.
+        </p>
+        <p class="big b">
+          All while offering guaranteed internship placements, live classes led by experts in the field, and lifetime access to an international network of alumni.
+        </p>
+        <div class="accredit-block border mt-6">
+          <div class="d-inline-flex flex-row align-items-center">
+            <div class="py-1 px-2">
+              <%= image_tag "logos/university-south-florida-sml", class: "uni-logo p-2" %>
+            </div>
+            <div>
+              <p class="mb-0 top-text">
+                <strong>Accredited by</strong><br>University of South Florida*
+              </p>
+            </div>
+          </div>
+          <div class="d-inline-flex flex-row align-items-center border-top">
+            <div class="col-6 pt-2 pb-3">
+              <p class="mb-0 sub-text">
+                Co-created and delivered in partnership with
+              </p>
+            </div>
+            <div class="pr-2">
+              <%= image_tag "logos/world-strides-dark", class: "accred-logo pr-3" %>
+              <%= image_tag "logos/isa-dark", class: "accred-logo" %>
+            </div>
+          </div>
+        </div>
+        <!--Buttons-->
+        <div class="mt-8">
+          <%= render "buttons/apply", text: "Apply to the program", btn_class: "btn-xxl d-block d-md-inline-block" %>
+          <a href="<%= ixperience_semester_partners_path %>">
+            <div class="tm-prospectus btn btn-dark btn-xxl d-block d-md-inline-block ml-md-2 ml-0 mt-5 mt-md-0">
+              More about the partnership
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
