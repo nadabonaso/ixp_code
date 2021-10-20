@@ -1,0 +1,655 @@
+<!--Bg for navbar-->
+<div class="bg-dark" style="height: 50px;"></div>
+
+<!-- Main Banner -->
+<section class="bg-dark">
+  <div class="text-white container pt-7 pb-9">
+    <div class="row d-flex align-items-md-center flex-column flex-md-row">
+     <!-- Banner text-->
+      <div class="col col-md-5 col-lg-6 pl-0 pr-0 text-left" >
+        <div class="col-md-10">
+          <h1 class="mb-6 strong" style="line-height: 1.1; font-size: 2.7rem">Unpacking the program</h1>
+          <p class="big b mb-7">
+            Using the unique iX Learning Pedagogy, students will learn more than they thought possible in just a few months, and gain deep insights into a future career. 
+          </p>
+          <%= render "launchpad/buttons/contact", btn_class: "btn-xl d-block d-md-inline-block mb-5 mb-lg-0 mt-lg-2 px-7", text: "Get Started" %>
+        </div>
+      </div>
+      <!-- Banner images -->
+      <div class="col d-block d-md-none pr-0 pl-0 pt-6"><%= image_tag "ixperience/launchpad/how-it-works-sm", alt: "how it works", class: 'img-fluid w-100' %></div>
+      <div class="col d-none d-md-block"><%= image_tag "ixperience/launchpad/how-it-works-md", alt: "how it works", class: 'img-fluid pt-4 float-right' %></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .lp-infographic h2{
+    font-size:7.5rem;
+  }
+  .lp-infographic .card.lp-card-clear{
+    background-color: transparent !important;
+  }
+  .lp-infographic .rounded-pill{
+    border-radius: 1rem !important;
+  }
+  .timeline-dot{
+    line-height: 0.7rem;
+  }
+</style>
+
+<section class="bg-white pt-8 pb-10 bg-launchpad-circles-program">
+  <div class="container lp-infographic">
+
+    <!-- Timeline item 1 -->
+    <div class="row no-gutters">
+      <!-- 01 A -->
+      <div class="col-sm">
+        <%= image_tag "ixperience/launchpad/step-1-sm", alt: "Step 1", class: 'd-block d-md-none float-right mr-n4 w-75' %>
+        <%= image_tag "ixperience/launchpad/step-1-md", alt: "Step 1", class: 'd-none d-md-block img-fluid w-100' %>
+      </div>
+      <!-- Vertical Line 1 and dot-->
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <p class="m-0">
+          <span class="rounded-circle bg-launchpad-pink--light pt-3 pb-4 px-4"><span class="timeline-dot badge badge-pill bg-success border-success">&nbsp;</span></span>
+        </p>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- 01 B -->
+      <div class="col-sm py-2">
+        <div class="col-md-10 card lp-card-clear mt-n9 mt-md-0">
+          <div class="card-body">
+            <h2 class="text-success strong mb-0">01</h2>
+            <h5 class="card-title strong pb-2">Top high schools partner with iX LaunchPad</h5>
+            <p class="card-text">
+              We work with each partner high school to seamlessly launch a registration and learning system hub, under a custom brand of your choosing. The program is just like other extracurriculars, and doesn't interfere with your school's normal curriculum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline item 2 -->
+    <div class="row no-gutters">
+    <!-- 02 A-->
+      <div class="col-sm py-2 d-flex">
+        <div class="col-md-10 ml-auto card mt-n6 mt-md-0 mb-md-8">
+          <div class="card-body">
+            <h2 class="text-success strong mb-0">02</h2>
+            <h5 class="card-title strong pb-2">Students choose a stream to take as an extracurricular</h5>
+            <p class="card-text">
+              Now that your high school offers iX LaunchPad, you can tell your students about the opportunity, and link them to a custom portal where they can register for their desired stream.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Vertical Line 2 and dot-->
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <p class="m-0">
+          <span class="timeline-dot badge badge-pill bg-success border-success">&nbsp;</span>
+        </p>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- 02 B-->
+      <div class="col-sm">
+        <div class="col-sm py-2 lp-program">
+          <div class="card rounded-pill bg-launchpad-pink--light mt-md-7 mt-md-8">
+            <div class="card-body p-7 p-md-6 p-lg-8 p-xl-9">
+              <div class="d-flex flex-row mb-8">
+                <div class="col-6 d-inline-flex align-items-center pl-0 pr-0 mr-lg-5">             
+                    <div class="circle-icon-pink-sm"><%= image_tag "ixperience/launchpad/icons/program/software", alt: "Software", class: 'img-fluid mt-n1' %></div>
+                  <p class="ml-2 mb-0">Software</p>
+                </div>
+                <div class="col-6 d-inline-flex align-items-center pl-0 pr-0">
+                  <div class="circle-icon-pink-sm"><%= image_tag "ixperience/launchpad/icons/program/design", alt: "Design", class: 'img-fluid mt-n1' %></div>
+                  <p class="ml-2 mb-0">Design</p>
+                </div>
+              </div>
+              <div class="d-flex flex-row mb-7">
+                <div class="col-6 d-inline-flex align-items-center pl-0 pr-0 mr-lg-5">             
+                  <div class="circle-icon-pink-sm"><%= image_tag "ixperience/launchpad/icons/program/finance", alt: "Business Finance", class: 'img-fluid mt-n1' %></div>
+                  <p class="ml-2 mb-0">Business</p>
+                </div>
+                <div class="col-6 d-inline-flex align-items-center pl-0 pr-0">
+                  <div class="circle-icon-pink-sm"><%= image_tag "ixperience/launchpad/icons/program/robotics", alt: "Robotics", class: 'img-fluid mt-n1' %></div>
+                  <p class="ml-2 mb-0">Robotics</p>
+                </div>            
+              </div>
+              <p class="strong mb-0">No prior experience required</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grey text box -->
+    <div class="col d-flex justify-content-center pt-8 pt-md-0"> 
+      <div class="rounded-pill bg-dark text-white text-center bigger w-100 p-6 mx-md-11 b">A stream is 9 months. Here's how they work:</div>
+    </div>
+    <!-- Vertical Line-->
+    <div class="row no-gutters">
+      <div class="col-sm"> <!--spacer--> </div>
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <div class="col-sm"> <!--spacer--> </div>
+    </div>
+
+    <!-- Timeline item 3 -->
+    <div class="row no-gutters">
+      <!-- 03 A-->
+      <div class="col-sm">
+        <div class="col-sm py-2">
+          <div class="card rounded-pill bg-launchpad-pink--light mt-md-6">
+            <div class="card-body p-7 p-lg-8">
+              <div class="d-flex flex-row mb-8">
+                <div class="col-6 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "ixperience/launchpad/icons/program/seminar-style", alt: "live classes", class: 'img-fluid' %></div>
+                  <p class="mb-0">20x live classes. 1.5 hours per week, limited to 25 students</p>
+                </div>
+                <div class="align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "ixperience/launchpad/icons/program/individual-attention", alt: "mentorship", class: 'img-fluid' %></div>
+                  <p class="mb-0">1:1 mentorship sessions with successful young professionals</p>
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="col-6 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "ixperience/launchpad/icons/program/virtual-classroom", alt: "homework", class: 'img-fluid' %></div>
+                  <p class="mb-0">1.5 hours of homework per week, with after hours support</p>
+                </div>
+                <div class="align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "ixperience/launchpad/icons/program/additional-hours", alt: "commitment", class: 'img-fluid' %></div>
+                  <p class="mb-0">± 3 hours per week time commitment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Vertical Line 3 and dot-->
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <p class="m-0">
+          <span class="timeline-dot badge badge-pill bg-success border-success">&nbsp;</span>
+        </p>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- 03 B-->
+      <div class="col-sm py-2 mt-md-8 order-first order-md-last">
+        <div class="col-md-10 card mt-md-n6 mb-md-9">
+          <div class="card-body">
+            <h2 class="text-success strong mb-0">03</h2>
+            <h5 class="card-title strong pb-2">It begins with 5 months of highly engaging classes</h5>
+            <p class="card-text">All of our classes are expert-taught in small sessions of less than 25 students.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline item 4 -->
+    <div class="row no-gutters">
+      <!-- 04 A-->
+      <div class="col-sm py-2 mt-md-8 d-flex">
+        <div class="col-md-10 ml-auto card mt-md-n8">
+          <div class="card-body">
+            <h2 class="text-success strong mb-0">04</h2>
+            <h5 class="card-title strong pb-2">Students then apply their skills to a 4-month real-world project</h5>
+            <p class="card-text">
+              The theoretical and skills component of the course is followed up with 4 months of practical experience as students get to implement what they’ve learned on a highly relevant real world project.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Vertical Line 4 and dot-->
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <p class="m-0">
+          <span class="timeline-dot badge badge-pill bg-success border-success">&nbsp;</span>
+        </p>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- 04 B-->
+      <div class="col-sm">
+        <div class="col-sm py-2">
+          <div class="card rounded-pill bg-launchpad-pink--light mt-md-6">
+            <div class="card-body p-7 p-lg-8">
+              <div class="d-flex flex-row mb-8">
+                <div class="col-6 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "ixperience/launchpad/icons/program/seminar-style", alt: "live classes", class: 'img-fluid' %></div>
+                  <p class="mb-0">Students continue learning in class (16x classes, 1.5 hours per week)</p>
+                </div>
+                <div class="align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "ixperience/launchpad/icons/program/remote-internship", alt: "internship", class: 'img-fluid' %></div>
+                  <p class="mb-0">Access to over 100 internship partners</p>
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="col-6 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "ixperience/launchpad/icons/program/final-project", alt: "presentation", class: 'img-fluid' %></div>
+                  <p class="mb-0">Final presentation to the company</p>
+                </div>
+                <div class="align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "ixperience/launchpad/icons/program/additional-hours", alt: "commitment", class: 'img-fluid' %></div>
+                  <p class="mb-0">± 3 hours per week time commitment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline item 5 -->
+    <div class="row no-gutters">
+      <!-- 05 A-->
+      <div class="col-sm">
+        <%= image_tag "ixperience/launchpad/step-5-sm", alt: "Step 5", class: 'd-block d-md-none float-right mt-7 mr-n4 w-75' %>
+        <%= image_tag "ixperience/launchpad/step-5-md", alt: "Step 5", class: 'd-none d-md-block img-fluid w-100' %>
+      </div>
+      <!-- Vertical Line 5 and dot-->
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <p class="m-0">
+          <span class="timeline-dot badge badge-pill bg-success border-success">&nbsp;</span>
+        </p>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- 05 B-->
+      <div class="col-sm py-2">
+        <div class="col-md-10 card lp-card-clear mt-n9 mt-md-0 mb-md-9">
+          <div class="card-body">
+            <h2 class="text-success strong mb-0">05</h2>
+            <h5 class="card-title strong pb-2">Mentorship and guidance from industry experts throughout </h5>
+            <p class="card-text">
+              Building a future career shouldn't be a solo journey. iX LaunchPad students receive individualized support throughout the program, and have access to mentors, coaches and advisors provided exclusively through our network, delivered through your school's custom portal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grey text box -->
+    <div class="col d-flex justify-content-center pt-8 pt-md-0"> 
+      <div class="rounded-pill bg-dark text-white text-center bigger w-100 p-6 mx-md-11 b">Impactful outcomes that build<br class="d-none d-md-block">confidence for every student's future</div>
+    </div>
+    <!-- Vertical Line-->
+    <div class="row no-gutters">
+      <div class="col-sm"> <!--spacer--> </div>
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <div class="col-sm"> <!--spacer--> </div>
+    </div>
+
+    <!-- Timeline item 6 -->
+    <div class="row no-gutters">
+      <!-- 06 A-->
+      <div class="col-sm py-2 d-flex">
+        <div class="col-md-10 ml-auto card lp-card-clear">
+          <div class="card-body">
+            <h2 class="text-success strong mb-0">06</h2>
+            <h5 class="card-title strong pb-2">iXperience Certificate</h5>
+            <p class="card-text">
+              A certificate from iXperience is recognizable around the world and can unlock doors to a number of future-focused industries. Students can add their verified certificate to their school resume and LinkedIn profile for future universities to see.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Vertical Line 6 and dot-->
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <p class="m-0">
+          <span class="timeline-dot badge badge-pill bg-success border-success">&nbsp;</span>
+        </p>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- 06 B-->
+      <div class="col-sm">
+        <%= image_tag "ixperience/launchpad/step-6-sm", alt: "Step 6", class: 'd-block d-md-none img-fluid w-90 mx-auto' %>
+        <%= image_tag "ixperience/launchpad/step-6-md", alt: "Step 6", class: 'd-none d-md-block img-fluid w-100' %>
+      </div>
+
+    <!-- Timeline item 7 -->
+    <div class="row no-gutters"> 
+      <!-- 07 A-->
+      <div class="col-sm"> 
+        <div class="col-sm py-2">
+          <div class="card rounded-pill bg-launchpad-pink--light mt-md-6 mb-md-8">
+            <div class="card-body p-8">
+              <div class="d-flex flex-wrap">
+                <div class="col-6 col-lg-4 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "logos/carousel/jp-morgan-b", alt: "jp morgan", class: 'img-fluid' %></div>
+                </div>
+                <div class="col-6 col-lg-4 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "logos/carousel/google-b", alt: "google", class: 'img-fluid' %></div>
+                </div>
+                <div class="col-6 col-lg-4 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "logos/carousel/goldman-sachs-b", alt: "goldman sachs", class: 'img-fluid' %></div>
+                </div>
+                <div class="col-6 col-lg-4 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "logos/carousel/mckinsey-b", alt: "mckinsey", class: 'img-fluid' %></div>
+                </div>
+                <div class="col-6 col-lg-4 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "logos/carousel/accenture-b", alt: "accenture", class: 'img-fluid' %></div>
+                </div>
+                <div class="col-6 col-lg-4 align-items-left pl-0">
+                  <div class="pb-4"><%= image_tag "logos/carousel/amazon-b", alt: "amazon", class: 'img-fluid' %></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Vertical Line 7 and dot-->
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <p class="m-0">
+          <span class="timeline-dot badge badge-pill bg-success border-success">&nbsp;</span>
+        </p>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- 07 B-->
+      <div class="col-sm py-2 mt-md-8 order-first order-md-last">
+        <div class="col-md-10 card mt-md-n11">
+          <div class="card-body">
+            <h2 class="text-success strong mb-0">07</h2>
+            <h5 class="card-title strong pb-2">Real-world experience </h5>
+            <p class="card-text">
+              The practical experience from a top company, along with the valuable resume references, can jumpstart a student’s college/university application and help them when it comes to finding a top job.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline item 8 -->
+    <div class="row no-gutters">
+      <!-- 08 A-->
+      <div class="col-sm py-2 d-flex">
+        <div class="col-md-10 ml-auto card lp-card-clear mt-n9 mt-md-0">
+          <div class="card-body">
+            <h2 class="text-success strong mb-0">08</h2>
+            <h5 class="card-title strong pb-2">Welcome to the Global iX Alumni network!</h5>
+            <p class="card-text">
+              iX LaunchPad alumni enter our global network at the end of their program. With this alumni status, they will continue to receive access to a range of benefits throughout their lives, such as ongoing career guidance, networking tools, and community events.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Vertical Line 8 and dot-->
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <p class="m-0">
+          <span class="timeline-dot badge badge-pill bg-success border-success">&nbsp;</span>
+        </p>
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- 08 B-->
+      <div class="col-sm order-first order-md-last">
+        <%= image_tag "ixperience/launchpad/step-8-sm", alt: "Step 8", class: 'd-block d-md-none float-right mt-7 mr-n4 w-75' %>
+        <%= image_tag "ixperience/launchpad/step-8-md", alt: "Step 8", class: 'd-none d-md-block img-fluid w-100' %>
+      </div>
+    </div>
+    
+    <!-- Timeline item 9 -->
+    <div class="row no-gutters">
+      <!-- 09 A -->
+      <div class="col-sm">
+        <%= image_tag "ixperience/launchpad/step-9-sm", alt: "Step 9", class: 'd-block d-md-none float-right mt-7 mr-n4 w-75' %>
+        <%= image_tag "ixperience/launchpad/step-9-md", alt: "Step 9", class: 'd-none d-md-block img-fluid w-100' %>
+      </div>
+      <!-- Vertical Line 9 and dot-->
+      <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right border-success">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <p class="m-0">
+          <span class="timeline-dot badge badge-pill bg-success border-success">&nbsp;</span>
+        </p>
+        <div class="row h-50">
+          <div class="col">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- 09 B -->
+      <div class="col-sm py-2 mt-md-8">
+        <div class="col-md-10 card lp-card-clear mt-n9 mt-md-0">
+          <div class="card-body">
+            <h2 class="text-success strong mb-0">09</h2>
+            <h5 class="card-title strong pb-2">Experience, perspective, and confidence</h5>
+            <p class="card-text">
+              iX LaunchPad isn't just about learning skills. It's also about equipping a student with the mindset they need to make brave and ambitious decisions for their exciting future. With exposure to the future world of work and personalized mentorship, they are one step closer to building an impactful life.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQs -->
+<section class="pt-10 pb-8 py-md-10 bg-launchpad-dark text-white">
+  <div class="container">
+    <div class="row text-center mb-6">
+      <div class="header-cols">
+        <h2 class="strong text-center mb-8">
+          Frequently asked questions
+        </h2>
+      </div>
+    </div>
+
+    <!--Desktop Only FAQs -->
+    <div class="d-none d-lg-block">
+    <div class="row">
+      <div class="col-3">
+        <h6 class="strong">How does iX LaunchPad integrate into our school's offering?</h6>
+        <p>
+          iX LaunchPad, like any extracurricular, occurs outside of school hours. When offering the program to your students, we design a custom portal for them to learn more and register. With iX LaunchPad, you’re providing your students with future-ready skills, work experience, and an informed perspective on their future education and career. It’s an ideal extracurricular for forward-thinking students carefully considering careers in a changing world.
+        </p>
+      </div>
+      <div class="col-3">
+        <h6 class="strong">Who are the teachers?</h6>
+        <p>
+          Each stream is taught by industry professionals with academic backgrounds. The Teaching Teams are invested in students' learning, use real-world examples relating to their own experiences and are extremely hands-on.
+        </p>
+      </div>
+      <div class="col-3">
+        <h6 class="strong">How does the project/internship component work?</h6>
+        <p>
+          We maintain partnerships with over 100 companies around the world. This enables us to ensure our curricula are at the forefront of industrial change. We pre-build projects with each company to match the relevant curriculum in the stream. Projects are at different levels of intensity too, allowing teachers to tailor match projects to the right students.
+        </p>
+      </div>
+      <div class="col-3">
+        <h6 class="strong">What type of student is right for this program?</h6>
+        <p>
+          iX LaunchPad is designed for students of all interests and backgrounds. Almost all of our programs require no prior experience in the relevant subject area, and are designed to expose students to critical skills across industries.
+        </p>
+      </div>
+    </div>
+    </div>
+
+    <!--Mobile Only FAQs -->
+    <div class="row justify-content-center d-block d-lg-none">
+      <div class="col-xl-10">
+        <div id="faq-accordion" class="mb-6">
+          <!-- Q 1-->
+          <div class="p-4">
+            <div class="row align-items-left cursor text-left border-bottom" data-toggle="collapse" data-target="#faq1">
+              <div class="col-10 mb-3 mb-md-0">
+                <div class="row no-gutters d-flex align-items-center">
+                  <div class="col">
+                    <h6 class="b mb-5">How does iX LaunchPad integrate into our school's offering?</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 text-right">
+                <h4>
+                  <i class="fa fa-angle-down"></i>
+                </h4>
+              </div>
+            </div>
+            <div id="faq1" data-parent="#faq-accordion" class="collapse">
+              <hr>
+              <div class="row mt-5">
+                <div class="col">
+                  <p class="big">
+                    iX LaunchPad, like any extracurricular, occurs outside of school hours. When offering the program to your students, we design a custom portal for them to learn more and register. With iX LaunchPad, you’re providing your students with future-ready skills, work experience, and an informed perspective on their future education and career. It’s an ideal extracurricular for forward-thinking students carefully considering careers in a changing world.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Q 2-->
+          <div class="p-4">
+            <div class="row align-items-left cursor text-left border-bottom" data-toggle="collapse" data-target="#faq2">
+              <div class="col-10 mb-3 mb-md-0">
+                <div class="row no-gutters d-flex align-items-center">
+                  <div class="col">
+                    <h6 class="b mb-5">Who are the teachers?</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 text-right">
+                <h4>
+                  <i class="fa fa-angle-down"></i>
+                </h4>
+              </div>
+            </div>
+            <div id="faq2" data-parent="#faq-accordion" class="collapse">
+              <hr>
+              <div class="row mt-5">
+                <div class="col">
+                  <p class="big">
+                    Each stream is taught by industry professionals with academic backgrounds. The Teaching Teams are invested in students' learning, use real-world examples relating to their own experiences and are extremely hands-on. 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>      
+          <!-- Q 3-->
+          <div class="p-4">
+            <div class="row align-items-left cursor text-left border-bottom" data-toggle="collapse" data-target="#faq3">
+              <div class="col-10 mb-3 mb-md-0">
+                <div class="row no-gutters d-flex align-items-center">
+                  <div class="col">
+                    <h6 class="b mb-5">How does the project/internship component work?</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 text-right">
+                <h4>
+                  <i class="fa fa-angle-down"></i>
+                </h4>
+              </div>
+            </div>
+            <div id="faq3" data-parent="#faq-accordion" class="collapse">
+              <hr>
+              <div class="row mt-5">
+                <div class="col">
+                  <p class="big">
+                    We maintain partnerships with over 100 companies around the world. This enables us to ensure our curricula are at the forefront of industrial change. We pre-build projects with each company to match the relevant curriculum in the stream. Projects are at different levels of intensity too, allowing teachers to tailor match projects to the right students.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>   
+          <!-- Q 4-->
+          <div class="p-4">
+            <div class="row align-items-left cursor text-left border-bottom" data-toggle="collapse" data-target="#faq4">
+              <div class="col-10 mb-3 mb-md-0">
+                <div class="row no-gutters d-flex align-items-center">
+                  <div class="col">
+                    <h6 class="b mb-5">What type of student is right for this program?</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 text-right">
+                <h4>
+                  <i class="fa fa-angle-down"></i>
+                </h4>
+              </div>
+            </div>
+            <div id="faq4" data-parent="#faq-accordion" class="collapse">
+              <hr>
+              <div class="row mt-5">
+                <div class="col">
+                  <p class="big">
+                    iX LaunchPad is designed for students of all interests and backgrounds. Almost all of our programs require no prior experience in the relevant subject area, and are designed to expose students to critical skills rather than defined just industries. The program allows students to explore a new skill, no matter their intended career path.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pink CTA -->
+<%= render "bottom_cta_pink" %>
